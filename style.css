@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+main {
+  border-radius: 10px;
+  background-color: white;
+  max-width: 400px;
+  margin: 10px;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+section {
+  font-size: x-large;
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+  margin: 20px 30px;
+}
+
+article {
+  color: hsl(214, 17%, 51%);
+  margin: 20px 30px;
+}
+
+footer {
+  transition: background-color 1.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-radius: 0px 0px 10px 10px;
+  height: 70px;
+}
+footer div#owner-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer div#owner-info div#owner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer div#owner-info div#owner p {
+  margin: 0px;
+  font-size: small;
+}
+footer div#owner-info div#owner p#owner-name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+}
+footer div#owner-info div#owner p#owner-date {
+  color: hsl(212, 23%, 69%);
+}
+footer div#owner-info img {
+  aspect-ratio: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+footer button {
+  order: 3;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 1.5s ease;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+  width: 100%;
+}
+aside div#social-icons {
+  display: flex;
+  gap: min(20px, 1.2em);
+}
+aside div#social-icons img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.hide-pop-up {
+  height: 0px;
+  width: 0px;
+  overflow: clip;
+  padding: 0;
+}
+
+footer.pop-up {
+  background-color: hsl(217, 19%, 35%);
+}
+
+button.pop-up {
+  background-color: hsl(214, 17%, 51%);
+}
+button.pop-up path {
+  fill: white;
+}
+
+@media (min-width: 40rem) {
+  main {
+    display: flex;
+    max-width: 700px;
+  }
+  header img {
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+  }
+  button {
+    anchor-name: --tool-tip;
+    position: relative;
+  }
+  aside {
+    position: absolute;
+    position-anchor: --tool-tip;
+    position-area: top;
+    margin-bottom: 20px;
+    position-try-fallbacks: top left;
+    background-color: hsl(214, 17%, 51%);
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px 20px;
+  }
+  aside::after {
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid hsl(214, 17%, 51%) 20px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
