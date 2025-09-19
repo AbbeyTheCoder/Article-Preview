@@ -134,7 +134,13 @@ button.pop-up {
 @media (min-width: 40rem) {
   main {
     display: flex;
-    max-width: 700px;
+    max-width: 750px;
+  }
+  header {
+    width: 40%;
+  }
+  header + div {
+    width: 60%;
   }
   header img {
     height: 100%;
